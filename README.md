@@ -16,3 +16,4 @@ Dotfiles for my own unique setup at bspwm.
 
 - Nerd Font used (Roboto Mono), you can find that in the [official nerdfont repo](https://github.com/ryanoasis/nerd-fonts).
 - FontAwesome Pro used in polybar. It's a Paid font. (even though i may reconsider using nerdfonts instead, maybe another day...)
+- Wallpaper. it's a personal wallpaper i did for myself. 
