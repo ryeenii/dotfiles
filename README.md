@@ -9,3 +9,5 @@ Dotfiles for my own unique setup at bspwm.
 - polybar
 - picom
 - neofetch
+- vimrc
+- zshrc
