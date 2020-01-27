@@ -14,5 +14,5 @@ Dotfiles for my own unique setup at bspwm.
 
 # Does not includes:
 
-- Nerd Font used (Roboto Mono), you can find that in the ![official nerdfont repo](https://github.com/ryanoasis/nerd-fonts).
+- Nerd Font used (Roboto Mono), you can find that in the [official nerdfont repo](https://github.com/ryanoasis/nerd-fonts).
 - FontAwesome pro used in polybar. Paid font (even though i may reconsider using nerdfonts instead, maybe another day...)
