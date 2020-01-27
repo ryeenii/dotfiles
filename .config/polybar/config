@@ -1,0 +1,156 @@
+#\\\\ all the color vars
+[clr]
+bg = ${xrdb:color0:#222}
+fg = ${xrdb:color5:#222}
+fg-2 = ${xrdb:color7:#222}
+fg-3 = #80eeeeee
+
+#\\\\ all the other values
+[val]
+rad = 2.0
+rad-2 = 5px
+rad-3 = 1
+rad-height = 22
+
+[settings]
+screenchange-reload = true
+
+#\\\\ module 1 - clock
+[module/clock]
+type = internal/date
+interval = 1.0
+time = %T
+format =  <label>
+label = %time%
+label-font = 2
+
+#\\\\ module 2 - battery
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT0
+adapter = ADP0
+poll-interval = 5
+format-charging =  <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full =  Full
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+#\\\\ module 3 - date
+[module/date]
+type = internal/date
+interval = 1.0
+date = %a, %b %d %Y 
+format = <label>
+label = %date%
+label-font = 2
+
+#\\\\ module 4 - bspwm workspace
+[module/wspace]
+type = internal/bspwm
+enable-click = true
+enable-scroll = true
+ws-icon-0 = general;
+ws-icon-1 = fun;
+ws-icon-2 = term.;
+ws-icon-3 = media;
+ws-icon-4 = misc.;
+format = <label-state>
+label-separator = |
+label-separator-padding = 2
+label-separator-foreground = ${clr.fg-3}
+label-monitor = %name%
+label-focused = %icon% %name%
+label-focused-font = 2
+label-focused-foreground = ${clr.fg-2}
+label-occupied = %icon% %name%
+
+[module/wspacei3]
+type = internal/i3
+enable-click = true
+enable-scroll = true
+ws-icon-0 = general;
+ws-icon-1 = fun;
+ws-icon-2 = term.;
+ws-icon-3 = media;
+ws-icon-4 = misc.;
+format = <label-state>
+label-separator = |
+label-separator-padding = 2
+label-separator-foreground = ${clr.fg-3}
+label-monitor = %name%
+label-focused = %icon% %name%
+label-focused-font = 2
+label-focused-foreground = ${clr.fg-2}
+label-occupied = %icon% %name%
+
+[bar/rclock]
+override-redirect = true
+width = 100
+height = ${val.rad-height}
+border-size = ${val.rad-3}
+border-color = ${clr.fg}
+offset-x = 39
+offset-y = 6
+padding = 2
+background = ${clr.bg}
+foreground = ${clr.fg}
+font-0 = "Roboto Mono Nerd Font:size=8"
+font-1 = "Roboto Mono Nerd Font:size=8:weight=bold"
+font-2 = "Font Awesome 5 Pro:style=Solid:size=8"
+modules-left = clock
+
+[bar/rbat]
+override-redirect = true
+width = 90
+height = ${val.rad-height}
+border-size = ${val.rad-3}
+border-color = ${clr.fg}
+offset-x = 1238
+offset-y = 6
+padding = 2
+background = ${clr.bg}
+foreground = ${clr.fg}
+font-0 = "Roboto Mono Nerd Font:size=8"
+font-1 = "Roboto Mono Nerd Font:size=8:weight=bold"
+font-2 = "Font Awesome 5 Pro:style=Solid:size=8"
+modules-center = battery
+
+[bar/rdate]
+override-redirect = true
+width = 142
+height = ${val.rad-height}
+border-size = ${val.rad-3}
+border-color = ${clr.fg}
+offset-x = 145
+offset-y = 6
+padding = 2
+background = ${clr.bg}
+foreground = ${clr.fg}
+font-0 = "Roboto Mono Nerd Font:size=8"
+font-1 = "Roboto Mono Nerd Font:size=8:weight=bold"
+font-2 = "Font Awesome 5 Pro:style=Solid:size=8"
+modules-left = date
+
+[bar/rwspace]
+override-redirect = true
+bottom = true
+width = 430
+height = ${val.rad-height}
+border-size = ${val.rad-3}
+border-color = ${clr.fg}
+offset-x = 39
+offset-y = 7
+padding = 2
+background = ${clr.bg}
+foreground = ${clr.fg}
+font-0 = "Roboto Mono Nerd Font:size=8"
+font-1 = "Roboto Mono Nerd Font:size=8:weight=bold"
+font-2 = "Font Awesome 5 Pro:style=Solid:size=8"
+modules-center = wspace
