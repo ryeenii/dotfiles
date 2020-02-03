@@ -20,9 +20,9 @@ screenchange-reload = true
 type = internal/date
 interval = 1.0
 time = %T
-format =  <label>
+format =  <label>
 label = %time%
-label-font = 2
+label-font = 1
 
 #\\\\ module 2 - battery
 [module/battery]
@@ -49,7 +49,7 @@ interval = 1.0
 date = %a, %b %d %Y 
 format = <label>
 label = %date%
-label-font = 2
+label-font = 1
 
 #\\\\ module 4 - bspwm workspace
 [module/wspace]
@@ -67,7 +67,7 @@ label-separator-padding = 2
 label-separator-foreground = ${clr.fg-3}
 label-monitor = %name%
 label-focused = %icon% %name%
-label-focused-font = 2
+label-focused-font = 1
 label-focused-foreground = ${clr.fg-2}
 label-occupied = %icon% %name%
 
@@ -86,7 +86,7 @@ label-separator-padding = 2
 label-separator-foreground = ${clr.fg-3}
 label-monitor = %name%
 label-focused = %icon% %name%
-label-focused-font = 2
+label-focused-font = 1
 label-focused-foreground = ${clr.fg-2}
 label-occupied = %icon% %name%
 
@@ -103,7 +103,6 @@ background = ${clr.bg}
 foreground = ${clr.fg}
 font-0 = "Roboto Mono Nerd Font:size=8"
 font-1 = "Roboto Mono Nerd Font:size=8:weight=bold"
-font-2 = "Font Awesome 5 Pro:style=Solid:size=8"
 modules-left = clock
 
 [bar/rbat]
@@ -119,7 +118,6 @@ background = ${clr.bg}
 foreground = ${clr.fg}
 font-0 = "Roboto Mono Nerd Font:size=8"
 font-1 = "Roboto Mono Nerd Font:size=8:weight=bold"
-font-2 = "Font Awesome 5 Pro:style=Solid:size=8"
 modules-center = battery
 
 [bar/rdate]
@@ -135,7 +133,6 @@ background = ${clr.bg}
 foreground = ${clr.fg}
 font-0 = "Roboto Mono Nerd Font:size=8"
 font-1 = "Roboto Mono Nerd Font:size=8:weight=bold"
-font-2 = "Font Awesome 5 Pro:style=Solid:size=8"
 modules-left = date
 
 [bar/rwspace]
@@ -152,5 +149,4 @@ background = ${clr.bg}
 foreground = ${clr.fg}
 font-0 = "Roboto Mono Nerd Font:size=8"
 font-1 = "Roboto Mono Nerd Font:size=8:weight=bold"
-font-2 = "Font Awesome 5 Pro:style=Solid:size=8"
 modules-center = wspace
